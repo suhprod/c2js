@@ -15,208 +15,256 @@ By:
 ====
 
 # Sample C Code
-#Declaration
-int main()
-{
 
-int a, b;
-char c;
-char d;
-long lg1 = 12345, lg2 = 9876;
-float f1 = 0.187;
-double darr[10];
-short s[4] = {1, 2, 3, 4};
-char *nm = "ucp";
+# Declaration
 
-printf("%s", "Hello World");
+	int main() {
 
-}
+		int a, b;
 
-#Arithmetic
-int main()
-{
+		char c;
+		char d;
 
-int a = 3, b = 2, c = 1, d = 0;
-c = a * b;
-d = (a % b);
+		long lg1 = 12345, lg2 = 9876;
 
-printf("%d", c);
-printf("%d", d);
+		float f1 = 0.187;
 
-c = a + b;
-d = b - a;
+		double darr[10];
 
-printf("%d", c);
-printf("%d", d);
+		short s[4] = {1, 2, 3, 4};
 
-}
+		char *nm = "ucp";
 
-#Conditions
-int main()
-{
+		printf("%s", "Hello World");
 
-int a[5] = {1, 2, 3, 4, 5};
+	}
 
-int i = 0, sum = 0;
+# Arithmetic
 
-for (i = 0; i < 5; i++) {
+	int main() {
 
-    sum += a[i];
-    printf("%d", a[i]);
+		int a = 3, b = 2, c = 1, d = 0;
 
-    if (i == 3) {
-       printf("i = 3");
-    }
+		c = a * b;
 
-}
-printf("%d", sum);
+		d = (a % b);
 
-switch (i) {
-case 1:
-sum = 10;
-break;
+		printf("%d", c);
 
-case 2:
-sum = 20;
-break;
+		printf("%d", d);
 
-case 3:
-sum = 30;
-break;
+		c = a + b;
 
-case 4:
-sum = 40;
-break;
+		d = b - a;
 
-case 5:
-sum = 50;
-break;
-}
+		printf("%d", c);
 
-printf("%d", sum);
+		printf("%d", d);
+
+	}
+
+# Conditions
+
+	int main() {
+
+		int a[5] = {1, 2, 3, 4, 5};
+
+		int i = 0, sum = 0;
+
+		for (i = 0; i < 5; i++) {
+
+			sum += a[i];
+			
+			printf("%d", a[i]);
+
+			if (i == 3) {
+			
+				printf("i = 3");
+				
+			}
+
+		}
+		printf("%d", sum);
+
+		switch (i) {
+		
+			case 1:
+			sum = 10;
+			break;
+
+			case 2:
+			sum = 20;
+			break;
+
+			case 3:
+			sum = 30;
+			break;
+
+			case 4:
+			sum = 40;
+			break;
+
+			case 5:
+			sum = 50;
+			break;
+			
+		}
+
+		printf("%d", sum);
+
+	}
+
+# Loop
+
+	int main() {
+
+		int a[5] = {1, 2, 3, 4, 5};
+
+		int i = 0, sum = 0;
+
+		for (i = 0; i < 5; i++) {
+
+			sum += a[i];
+			
+			printf("%d", a[i]);
+
+			if (i == 3) {
+			
+				printf("i = 3");
+				
+			}
+
+		}
+
+		printf("%d", sum);
+	}
+
+# Strings
+
+	#include <string.h>
+
+	int main() {
+		char *a = "University of";
+		
+		char *b = "University of Punjab";
+		
+		char *c = "Central Punjab";
+		
+		int res = 0;
+
+		char *d = strcat(a,c);
+		
+		printf(d);
+
+		res = strcmp(b, c);
+		
+		printf("%d", res);
+
+		res = strncmp(a, b, 8);
+		
+		printf("%d", res);
+
+		res = strlen(a);
+		
+		printf("%d", res);
+
+	}
+
+# Linklist
+
+	#include <stdio.h>
+
+	struct node {
+	
+		int data;
+		
+		struct node *next;
+		
+	};
+
+	void print(struct node root) {
+	
+		struct node tmp = root;
+	
+		while(tmp != NULL) {
+		
+			printf("%d", tmp.data);
+			
+			tmp = tmp.next;
+			
+		}
+		
+	}
+
+	int  main() {
+	
+		struct node nodes[3];
+		
+		int i = 0, x = 0;
+
+		for (i = 0; i < 2; i++) {
+		
+			printf("%s", "Enter data: ");
+			
+			scanf("%d", &x);
+
+			nodes[i].data = x;
+			
+			nodes[i].next = nodes[i+1];
+
+		}
+		
+		printf("%s", "Enter data: ");
+		
+		scanf("%d", &x);
+		
+		nodes[i].data = x;
+		
+		nodes[i].next = NULL;
+
+		print(nodes[0]);
+
+	}
+
+# Structs
+
+	struct myS {
+	
+		int s_roll;
+		
+		char *s_name;
+	};
 
 
-}
+	int main() {
+	
+		struct myS std;
 
-#Loop
-int main()
-{
+		std.roll = 257;
 
-int a[5] = {1, 2, 3, 4, 5};
+		std.s_name = "john";
 
-int i = 0, sum = 0;
+		printf("%d", std.roll);
 
-for (i = 0; i < 5; i++) {
+		printf(std.s_name);
 
-    sum += a[i];
-    printf("%d", a[i]);
+	}
 
-    if (i == 3) {
-       printf("i = 3");
-    }
+# Regex
 
-}
+	#include <regex.h>
+	
+	#include <stdio.h>
 
-printf("%d", sum);
-}
+	int main() {
+		char *s = "";
+		
+		int x = 0;
+		
+		scanf("%s",  s);
+		
+		x = match("^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$", s);
 
-#Strings
-###include <string.h>
+		printf("%d", x);
 
-int main()
-{
-char *a = "University of";
-char *b = "University of Punjab";
-char *c = "Central Punjab";
-int res = 0;
-
-char *d = strcat(a,c);
-printf(d);
-
-res = strcmp(b, c);
-printf("%d", res);
-
-res = strncmp(a, b, 8);
-printf("%d", res);
-
-res = strlen(a);
-printf("%d", res);
-
-}
-
-#LinkList
-##include <stdio.h>
-
-struct node
-{
-int data;
-struct node *next;
-};
-
-void print(struct node root) 
-{
-struct node tmp = root;
-while(tmp != NULL)
-{
-	printf("%d", tmp.data);
-	tmp = tmp.next;
-}
-}
-
-int  main() 
-{
-struct node nodes[3];
-int i = 0, x = 0;
-
-for (i = 0; i < 2; i++) {
-
-
-	printf("%s", "Enter data: ");
-	scanf("%d", &x);
-
-nodes[i].data = x;
-nodes[i].next = nodes[i+1];
-
-}
-printf("%s", "Enter data: ");
-scanf("%d", &x);
-nodes[i].data = x;
-nodes[i].next = NULL;
-
-print(nodes[0]);
-
-}
-
-#Structs
-struct myS {
-int s_roll;
-char *s_name;
-};
-
-
-int main()
-{
-struct myS std;
-
-std.roll = 257;
-std.s_name = "john";
-
-printf("%d", std.roll);
-printf(std.s_name);
-
-}
-
-#Regex
-##include <regex.h>
-##include <stdio.h>
-
-int main()
-{
-char *s = "";
-int x = 0;
-scanf("%s",  s);
-x = match("^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$", s);
-
-printf("%d", x);
-
-}
+	}
