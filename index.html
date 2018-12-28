@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/ico.png" />
+
+    <title> C2JS </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font1.css" rel="stylesheet" type="text/css">
+    <link href="font2.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    C2JS
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+
+                    <li>
+                        <a class="page-scroll" href="#help">User Manual</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#terms">Terms</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#editor"> </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading"> C2JS </h1> 
+                        <p class="intro-text">A compiler that converts C language to Javascript code.</p>
+                        <hr>
+                        <div id="fileUploadContainer" class="intro-head">
+                            <input id="uploadFile" placeholder="Select Your C File..."  disabled="disabled" />
+                            <div class="fileUpload btn btn-primary">
+                                <span>Upload File</span>
+                                <input id="uploadBtn" type="file" class="upload"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Terms Section -->
+    <section id="terms" class="container content-section text-center">
+        <div class="row">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p>Terms and Conditions</p>
+					<p>The product, C2JS, is for public use therefore requires no license. But the product falls under the category of GNU General Public License whose details can be found at http://www.gnu.org/licenses/gpl-2.0.html </p>
+					<p>As theories, concepts and algorithms for HLL translations are borrowed from traditional theory of compilers, automata and other related fields, therefore, users of C2JS are supposed to accepting all the terms and conditions enforced by owners of involved theories and works.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Section -->
+    <section id="help" class="container text-center">
+        <div class="gallery-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p>All Help and Instructions</p>
+					<p>To get a c code converted to js, first upload the c file using the "upload" button and then use the "convert" button to convert to JavaScript.</p>
+					<p>You can also write your code directly to editor provided, and then use the button "convert". </p>
+					<p>Use the button "Execute" to execute the js code. The results will be shown in the console of browser.</p>
+					<p>C2JS deals with only C99 version of the C language. Apart from this version restriction, there are also some other constraints due to run time environment of browser and operating system(s). A detailed discussion about restrictions and limits can be found in sections 2.1, 2.3, 2.4 and 2.5 of final documentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p>About Section</p>
+                    <p>A "C to JavaScript compiler", that efficiently translates a "standard C" source program to equivalent JavaScript (as well as necessary HTML) and thus can be executed in a web browser or an equivalent emulator. C2JS will first validate the original C code, run it through all the traditional compiler front-end phases (Lexical Analysis, Syntax Analysis, Semantic Analysis), and then translate the source file into valid equivalent JavaScript.</p>
+					<p>C2JS is developed as a graduation project for the degree requirements of Computer Science under the faculty of information technology, University of Central Punjab Lahore, Pakistan. </p>
+					<p>Developed By: <p>Shabbir ul Hassan</p> <p>Danish Nawab</p> <p>Usman Riaz</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editor Section -->
+    <section class="container content-section text-center">
+        <div id="editor" class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <p>Editor</p>
+                <div id="warning">Please <a class="page-scroll" href="#page-top" onclick="uploadProcess()">Upload</a> Your C File First!</div>
+                <div class="col-lg-5">
+                    <div id="yourCodeSection">
+                        <p style="color:white">Input Code (C)</p>
+                        <textarea id="codeArea" cols="50" rows="20"></textarea>
+						<input id="convertBottom" type="button" onClick="start()" class="btn btn-info" value="Convert Code">
+                    </div>
+                </div>
+                <div class="col-lg-5 col-lg-offset-1">
+                    <div id="yourCodeResultSection">
+                        <p style="color:white">Output Code (JS)</p>
+                        <textarea id="resultArea" cols="50" rows="20" disabled></textarea>
+						<input id="executeCode" type="button" class="btn btn-info" value="Execute" onClick="runJS()" disabled>
+                    </div>
+                </div>
+			</div>
+			<div class="col-lg-10 col-lg-offset-1">
+				<p class="marginTop" style="color:white">Error  Messages</p>
+				<textarea id="diagnostic" readonly="true" rows="5" cols="100"></textarea>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <hr>
+            <p>C2JS BY Shabbir - Danish - Usman</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/_c2js/compiler/codegen.js"> </script>
+    <script type="text/javascript" src="js/_c2js/compiler/parser.js"> </script>
+    <script type="text/javascript" src="js/_c2js/compiler/lexer.js"> </script>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+    <!-- Custom jQuery Scroll Plugin -->
+    <script src="js/jquery.scrollTo.min.js"></script>
+
+    <!-- C2JS File Reading Plugin -->
+    <script src="js/_c2js/fileReading.js"></script>
+
+    <!-- C2JS Convert Code -->
+    <script src="js/_c2js/convert.js"></script>
+
+    <script type="text/javascript">
+    </script>
+
+</body>
+
+</html>
